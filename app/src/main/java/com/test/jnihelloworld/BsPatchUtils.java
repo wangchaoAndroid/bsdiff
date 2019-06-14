@@ -147,26 +147,26 @@ public class BsPatchUtils {
     /**
      * 兼容8.0安装位置来源的权限
      */
-    private static void installApkO(Context context, String downloadApkPath) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            //是否有安装位置来源的权限
-            boolean haveInstallPermission = context.getPackageManager().canRequestPackageInstalls();
-            if (haveInstallPermission) {
-                installApk(context, downloadApkPath);
-            } else {
-                Log.e("bspathc","安装应用需要打开安装未知来源应用权限，请去设置中开启权限");
-//                new CakeResolveDialog(context, "", new CakeResolveDialog.OnOkListener() {
-//                    @Override
-//                    public void onOkClick() {
-//                        Uri packageUri = Uri.parse("package:"+ AppUtils.getAppPackageName());
-//                        Intent intent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,packageUri);
-//                    }
-//                }).show();
-            }
-        } else {
-            installApk(context, downloadApkPath);
-        }
-    }
+//    private static void installApkO(Context context, String downloadApkPath) {
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//            //是否有安装位置来源的权限
+//            boolean haveInstallPermission = context.getPackageManager().canRequestPackageInstalls();
+//            if (haveInstallPermission) {
+//                installApk(context, downloadApkPath);
+//            } else {
+//                Log.e("bspathc","安装应用需要打开安装未知来源应用权限，请去设置中开启权限");
+////                new CakeResolveDialog(context, "", new CakeResolveDialog.OnOkListener() {
+////                    @Override
+////                    public void onOkClick() {
+////                        Uri packageUri = Uri.parse("package:"+ AppUtils.getAppPackageName());
+////                        Intent intent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,packageUri);
+////                    }
+////                }).show();
+//            }
+//        } else {
+//            installApk(context, downloadApkPath);
+//        }
+//    }
 
     public static  void installApk(Context context,String downloadApk) {
         Intent intent = new Intent(Intent.ACTION_VIEW);

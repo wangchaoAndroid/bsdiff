@@ -16,6 +16,10 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/jniLibs/${ANDROID_ABI})
 #指定用到的系统库或者NDK库或者第三方库的搜索路径，可选。
 #LINK_DIRECTORIES(/usr/local/lib)
 
+
 #添加子目录，将自动找到子目录中的CMakeLists.txt
-ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/src/main/cpp/bsdiff)
-ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/src/main/cpp/bspatch)
+#ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/src/main/cpp/bsdiff)
+#ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/src/main/cpp/bspatch)
+#ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/src/main/cpp/libjpeg-turbo)
+#ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/src/main/cpp/compress)
+ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/src/main/cpp/videoc)

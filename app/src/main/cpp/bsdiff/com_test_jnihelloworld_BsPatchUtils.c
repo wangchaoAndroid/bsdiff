@@ -24,6 +24,7 @@ JNIEXPORT jint JNICALL Java_com_test_jnihelloworld_BsPatchUtils_bsdiff
             (*env)->ReleaseStringUTFChars(env, oldPath, argv[1]);
             (*env)->ReleaseStringUTFChars(env, newPath, argv[2]);
             (*env)->ReleaseStringUTFChars(env, patchPath, argv[3]);
+
             return ret;
   }
 
